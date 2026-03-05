@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trình xem Flipbook của tôi</title>
+    <style>
+        /* Thiết lập cơ bản để trang web chiếm toàn màn hình */
+        body, html {
+            margin: 0;
+            padding: 0;
+            height: 100%;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f4f4f9;
+            display: flex;
+            flex-direction: column;
+        }
+
+        /* Thanh tiêu đề phía trên */
+        header {
+            background-color: #2c3e50;
+            color: white;
+            padding: 15px 20px;
+            text-align: center;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+
+        /* Khu vực chứa Flipbook */
+        .flipbook-container {
+            flex-grow: 1; /* Tự động lấp đầy phần diện tích còn lại */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+        }
+
+        /* Style cho Iframe để trông mượt mà hơn */
+        iframe {
+            border: none;
+            border-radius: 8px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+            width: 100%;
+            max-width: 1200px; /* Giới hạn chiều rộng để không quá loãng trên màn hình lớn */
+            height: 90%;
+        }
+
+        footer {
+            text-align: center;
+            padding: 10px;
+            font-size: 0.9em;
+            color: #7f8c8d;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>📖 Tạp chí Trực tuyến của tôi</h1>
+    </header>
+
+    <main class="flipbook-container">
+        <iframe 
+            src="https://heyzine.com/flip-book/của-bạn-ở-đây" 
+            allowfullscreen 
+            scrolling="no" 
+            allow="clipboard-write">
+        </iframe>
+    </main>
+
+    <footer>
+        Bản quyền © 2024 - Được vận hành bởi Hayzine & Gemini
+    </footer>
+
+</body>
+</html>
